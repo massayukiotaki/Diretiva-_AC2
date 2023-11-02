@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor = "let missao of missoes; index as i; first as isFirst">
+    <p [ngStyle]= "{'text-decoration' : missao.concluido ? 'line-through': 'none'}" >{{missao.descricao}}</p>
+    <button (click)="mudaStatus(missao)">Realizar</button>
+  </li>
+</ul>
